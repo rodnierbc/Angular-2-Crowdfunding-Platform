@@ -11,18 +11,18 @@ export class FilterText implements PipeTransform {
         let resultArray = [];
         if (!projects) {
             return resultArray;
+        }
+        else if (!args) {
+          return  projects;
+        }
+        else {
+          for (let project of projects) {
+              if (project.title != null && project.title.match(new RegExp(''+args, 'i'))) {
+                  resultArray.push(project);
+              }
           }
-            else if (!args) {
-                return  projects;
-            }
-            else {
-                for (let project of projects) {
-                    if (project.title != null && project.title.match(new RegExp(''+args, 'i'))) {
-                        resultArray.push(project);
-                    }
-                }
-                return resultArray;
-            }
+          return resultArray;
+        }
     }
 
 }
