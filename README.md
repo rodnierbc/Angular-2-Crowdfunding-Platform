@@ -5,7 +5,8 @@ In our amplification was necessary to integrate a filter in order to make it eas
 
 ### 1- Create the Filter Pipe
 For pipe creation we use the following command:
-```$ ng g pipe filter-text
+```sh
+$ ng g pipe filter-text
 ```
 Let’s populate the pipe with code for the filter, Here is the code:
 
