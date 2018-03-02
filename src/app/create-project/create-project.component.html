@@ -1,0 +1,40 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Project</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Title:</label>
+        <br>
+        <input #newTitle>
+      </div>
+
+      <div>
+        <label>Category:</label>
+        <br>
+        <input #newCategory>
+      </div>
+
+      <div>
+        <label>Money Required:</label>
+        <br>
+        <input #newMoneyRequired>
+      </div>
+
+      <div>
+        <label>Rewards:</label>
+        <br>
+        <input #newGetRewards>
+      </div>
+
+      <div>
+        <label>Description:</label>
+        <br>
+        <textarea #newDescription></textarea>
+      </div>
+      <button routerLink="/admin-projects" (click)="submitForm(newTitle.value, newCategory.value, newDescription.value, newMoneyRequired.value, newGetRewards.value); newTitle.value=''; newCategory.value=''; newDescription.value=''; newMoneyRequired.value=''; newGetRewards.value=''"><img src="../../assets/svg-icons/account-login.svg">Add</button>
+    </div>
+  </div>
+</div>

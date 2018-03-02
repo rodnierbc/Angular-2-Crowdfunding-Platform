@@ -1,0 +1,16 @@
+
+<h4></h4>
+<div *ngIf="projectToEditObservable | async as projectToEditO">
+  <label>New Proyect Title:</label>
+  <input [(ngModel)]="projectToEdit.title" >
+  <label>New Proyect Category:</label>
+  <input [(ngModel)]="projectToEdit.category" >
+  <label>New Proyect Description:</label>
+  <input [(ngModel)]="projectToEdit.description" >
+  <label>New Proyect Money Required:</label>
+  <input [(ngModel)]="projectToEdit.money_required" >
+  <label>New Proyect Get Rewards:</label>
+  <input [(ngModel)]="projectToEdit.get_rewards" >
+  <button routerLink="/admin-projects" (click)="beginUpdatingProject(projectToEdit)">Update</button>
+  <hr>
+</div>

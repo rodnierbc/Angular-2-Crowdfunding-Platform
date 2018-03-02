@@ -1,0 +1,30 @@
+{
+  "projects": {
+    "0": {
+      "title": "title 1",
+      "category": "category 1",
+      "description": "description 1",
+      "money_required": 10000,
+      "get_rewards": true
+    },
+    "1": {
+      "title": "title 2",
+      "category": "category 2",
+      "description": "description 2",
+      "money_required": 20000,
+      "get_rewards": false
+    }
+  },
+  "categories": {
+    "0": {
+      "name": "name 1",
+      "description": "description 1"
+    },
+    "1": {
+      "name": "name 2",
+      "description": "description 2"
+    }
+  }
+
+
+}

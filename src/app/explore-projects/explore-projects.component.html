@@ -1,0 +1,48 @@
+<div class="card">
+    <div class="alert alert-primary">
+    <div class="row">
+            <div class="col-md-8">
+                <div class="form-group">
+                    <h3>Projects</h3>
+                </div>
+            </div>
+            <div *ngIf="currentRoute === '/admin-projects'" class="col-md-2">
+                <div class="form-group">
+                    <a class="text-muted" routerLink="create-project">New Project !</a>
+                    <input type="text" [(ngModel)]="text" placeholder="search by project title">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+    <table class="table">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Money Required</th>
+                <th>Get Rewards</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let project of projects | async | filterText: text">
+                <td>{{project.title}}</td>
+                <td>{{project.category}}</td>
+                <td>{{project.description}}</td>
+                <td>{{project.money_required}}</td>
+                <td>{{project.get_rewards}}</td>
+                <td *ngIf="currentRoute === '/admin-projects'">
+                  <button class="btn btn-Success btn-xs" (click)="goToEditPage(project)">Edit</button>
+                  <button (click)="showProjectDetail(project)" class="btn btn-Warning btn-xs">View</button>
+                  <button (click)="beginDeletingProject(project)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="selectedProjectDetail">
+      <hr>
+      <app-project-datail [selectedProjectDetail]="selectedProjectDetail" (doneViewSender)="doneView()"></app-project-datail>
+    </div>

@@ -1,0 +1,23 @@
+<div>
+        <div *ngIf="selectedProjectDetail">
+          <div class="card">
+            <div class="alert alert-success">
+              <div class="row">
+                  <div class="col-md-10">
+                      <div class="form-group">
+                          <h3>Project Details</h3>
+                      </div>
+                  </div>
+                  <div class="col-md-2">
+                      <div class="form-group">
+                          <button class="btn btn-success btn-xs" (click)="doneView()">Exit</button>
+                      </div>
+                  </div>
+              </div>
+            </div>
+              <div class="card-body">
+                <p><strong>Title:</strong> {{selectedProjectDetail.title}}</p>
+              </div>
+          </div>
+        </div>
+      </div>
