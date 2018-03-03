@@ -26,7 +26,6 @@
             <tr>
                 <th>Title</th>
                 <th>Category</th>
-                <th>Description</th>
                 <th>Money Required</th>
                 <th></th>
             </tr>
@@ -35,7 +34,6 @@
               <tr *ngFor="let project of projects | async | filterText: text">
                 <td>{{project.title}}</td>
                 <td>{{project.category}}</td>
-                <td>{{project.description}}</td>
                 <td>{{project.money_required}}</td>
                 <td *ngIf="currentRoute === '/admin-projects'">
                   <button class="btn btn-Success btn-xs" (click)="goToEditPage(project)">Edit</button>

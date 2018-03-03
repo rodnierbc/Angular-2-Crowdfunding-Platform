@@ -20,3 +20,9 @@ In order to use the pipe, first we imported it into the app module and we create
 
 Then we included our filter in the _projects_ list into _ngFor_ directive. Here is the code:
 <p align="center"><img width="90%" src="project-documentation/screenshots/include-pipe-ngFor.png"></p>
+
+### 3- Results
+Now we should see an input box and below the table that contains some data of the projects.
+<p align="center"><img width="90%" src="project-documentation/screenshots/data-table-before.png"></p>
+If we type some text into the box and see that our list being dynamically filtered!
+<p align="center"><img width="90%" src="project-documentation/screenshots/data-table-after-search.png"></p>
