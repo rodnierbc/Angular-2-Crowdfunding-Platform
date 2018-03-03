@@ -5,11 +5,12 @@ import { ExploreProjectsComponent } from './explore-projects/explore-projects.co
 import { AdminProjectsComponent } from './admin-projects/admin-projects.component';
 import { CreateProjectComponent } from './create-project/create-project.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: DashboardWelcomeComponent
+    component: LoginComponent
   },
   {
     path: 'explore-projects',
