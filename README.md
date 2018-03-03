@@ -14,5 +14,9 @@ Let’s populate the pipe with code for the filter, Here is the code:
 
 This code will return a subset of an array of _Projects_ if any project contains the searchText string in its property _title_. In the future we can extend our code to expand the search on other properties such as the category etc.
 
-### 2- We created _Imput_ declaration, and then we included _Two-way Binding_ using _ngModel_, this allows the Project model _text_ variable to update the input when it changes and listen for changes on the input as well. Here is the code:
+### 2- Use the Filter Pipe
+In order to use the pipe, first we imported it into the app module and we created _Input_ box into the _explore-projects.component.html_ and including  _Two-way Binding_ using _ngModel_, this allows the Project model _text_ variable to update the input when it changes and listen for changes on the input as well. Here is the code:
 <p align="center"><img width="90%" src="project-documentation/screenshots/input-search.png"></p>
+
+Then we included our filter in the _projects_ list into _ngFor_ directive. Here is the code:
+<p align="center"><img width="90%" src="project-documentation/screenshots/include-pipe-ngFor.png"></p>

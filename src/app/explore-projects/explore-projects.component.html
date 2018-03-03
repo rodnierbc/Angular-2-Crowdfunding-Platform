@@ -28,7 +28,6 @@
                 <th>Category</th>
                 <th>Description</th>
                 <th>Money Required</th>
-                <th>Get Rewards</th>
                 <th></th>
             </tr>
             </thead>
@@ -38,7 +37,6 @@
                 <td>{{project.category}}</td>
                 <td>{{project.description}}</td>
                 <td>{{project.money_required}}</td>
-                <td>{{project.get_rewards}}</td>
                 <td *ngIf="currentRoute === '/admin-projects'">
                   <button class="btn btn-Success btn-xs" (click)="goToEditPage(project)">Edit</button>
                   <button (click)="showProjectDetail(project)" class="btn btn-Warning btn-xs">View</button>
