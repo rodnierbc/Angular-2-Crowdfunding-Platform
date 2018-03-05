@@ -21,7 +21,7 @@ this.user.subscribe(
         }
       );
   }
-signInWithTwitter() {
+  signInWithTwitter() {
     return this._firebaseAuth.auth.signInWithPopup(
       new firebase.auth.TwitterAuthProvider()
     )
@@ -38,14 +38,14 @@ signInWithTwitter() {
     )
   }
 
-isLoggedIn() {
+  isLoggedIn() {
   if (this.userDetails == null ) {
       return false;
     } else {
       return true;
     }
   }
-logout() {
+  logout() {
     this._firebaseAuth.auth.signOut()
     .then((res) => this.router.navigate(['/']));
   }
