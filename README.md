@@ -27,20 +27,33 @@ Now we should see an input box and below the table that contains some data of th
 If we type some text into the box and see that our list being dynamically filtered!
 <p align="center"><img width="90%" src="project-documentation/screenshots/data-table-before.png"></p>
 
-##Authentication  using Angular 2 and Firebase.
+## Authentication  using Angular 2 and Firebase.
 I was very curious about how the user authentication process works using Firebase and Angular 2, so I stopped to consult updated bibliography about the topic and try to implement the user authentication process on the Crowdfunding application.
 Firebase Authentication provides backend services, easy-to-use SDKs, and ready-made UI libraries to authenticate users to our app. It supports authentication using passwords, popular federated identity providers like Google, Facebook and Twitter, Github etc.
-## 1- Getting ready
+### 1- Getting ready
 The first thing we have to do is make sure to install angularfire2 and for that we use the following command:
 ```sh
 $ npm install angularfire2 firebase --save
 ```
-Then make sure to make the necessary configurations in our file _src / app / app.module.ts_ to import the important classes that will provide us some necessary methods and properties that will intervene in the user authentication process.
+Then make sure to make the necessary configurations in our file _src/app/app.module.ts_ to import the important classes that will provide us some necessary methods and properties that will intervene in the user authentication process.
 
-### 1- Create an auth service to implement the authentication
-In the auth.service.ts file, we imported AngularFireAuth, firebase and Observable also we created an observable user variable, injected FirebaseAuth in the constructor.
+### 2- Create an auth service to implement the authentication
+In our auth.service.ts file, we imported AngularFireAuth, firebase and Observable also we created an observable user variable, injected FirebaseAuth in the constructor.
 The following image shows a capture of the source code of our service.
+
 <p align="center"><img width="90%" src="project-documentation/screenshots/auth-service-declaration.png"></p>
+
  Then we implemented methods that allow authentication using Facebook, Twitter, Google and we also include the isLoggedIn () and Logout () methods.
  The following image shows a capture of the source code of our service.
+
  <p align="center"><img width="90%" src="project-documentation/screenshots/auth-service-methods.png"></p>
+
+### 3- Create login component.
+In our login.component.ts file we imported the AuthService, injected it in the constructor and implemented signInWithTwitter(), signInWithFacebook() and signInWithGoogle() methods.
+The following image shows a capture of the source code of our login component.
+
+<p align="center"><img width="90%" src="project-documentation/screenshots/login-component.png"></p>
+
+In our login.component.html file we added click functions for each buttons. See the code below:
+
+<p align="center"><img width="90%" src="project-documentation/screenshots/login-component-html.png"></p>
