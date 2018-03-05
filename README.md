@@ -1,3 +1,28 @@
+# Crowdfunding
+
+This is a web application created with the aim of implementing basic functionalities on a data model, which consist of the realization of a (CRUD) on the model Project hosted in a non-relational database (Firebase), in addition to the implementation of search filters and functionalities for the authentication process.
+
+##### By: Rodnier Borrego
+
+* Clone github repository https://github.com/rodnierbc/Angular-2-Crowdfunding-Platform.git
+* Open terminal and create _api-keys.ts_ file at the top of the project directory
+* Create a new data base using firebase
+* In _api-keys.ts_ file add the following code:
+```sh
+export var masterFirebaseConfig = {
+  apiKey: "?",
+    authDomain: "?",
+    databaseURL: "?",
+    storageBucket: "?",
+    messagingSenderId: "?"
+}
+```
+* In the previously mentioned code it is necessary to replace each interrogation symbol with the data that is provided by Firebase once the database is created.
+
+* You can import certain test data found in the file firebase-data-structure.json into your database.
+
+* Run terminal commands: npm install, ng build; ng serve
+
 
 ## Create a search pipe to dynamically filter results with Angular-2
 A very common use case of this is to have an input box where a user enters a search text and the results are filtered appropriately.
@@ -61,3 +86,7 @@ In our login.component.html file we added click functions for each buttons. See 
 ### 3- Results
 Now we can see that by clicking on the button for authentication with Twitter we access the login page of the Twiter application.
 <p align="center"><img width="90%" src="project-documentation/screenshots/login-twitter-example.png"></p>
+
+### 4- Conclusions
+Even all the functionalities for the authentication process are not complete, but I am working on it.
+Until the moment I thought it was very interesting to touch closely these topics and others closely related as the assignment of permissions based on roles since it is extremely important the security of our applications.
