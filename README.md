@@ -57,3 +57,7 @@ The following image shows a capture of the source code of our login component.
 In our login.component.html file we added click functions for each buttons. See the code below:
 
 <p align="center"><img width="90%" src="project-documentation/screenshots/login-component-html.png"></p>
+
+### 3- Results
+now we can see that by clicking on the button for authentication with Twitter we access the login page of the Twiter application.
+<p align="center"><img width="90%" src="project-documentation/screenshots/login-twitter-example.png"></p>

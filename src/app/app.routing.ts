@@ -13,6 +13,10 @@ const appRoutes: Routes = [
     component: LoginComponent
   },
   {
+    path: 'dashboard-welcome',
+    component: DashboardWelcomeComponent
+  },
+  {
     path: 'explore-projects',
     component: ExploreProjectsComponent
   },

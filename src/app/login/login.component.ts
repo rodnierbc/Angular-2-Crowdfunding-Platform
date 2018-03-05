@@ -17,21 +17,21 @@ export class LoginComponent implements OnInit {
   signInWithTwitter() {
       this.authService.signInWithTwitter()
       .then((res) => {
-          this.router.navigate(['explore-projects'])
+          this.router.navigate(['dashboard-welcome'])
         })
       .catch((err) => console.log(err));
     }
     signInWithFacebook() {
       this.authService.signInWithFacebook()
       .then((res) => {
-          this.router.navigate(['explore-projects'])
+          this.router.navigate(['dashboard-welcome'])
         })
       .catch((err) => console.log(err));
     }
     signInWithGoogle() {
       this.authService.signInWithGoogle()
       .then((res) => {
-          this.router.navigate(['explore-projects'])
+          this.router.navigate(['dashboard-welcome'])
         })
       .catch((err) => console.log(err));
     }
